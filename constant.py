@@ -1,12 +1,11 @@
 # HerePhishyPhishy
 # Eric Holguin
-# Mohammad Hossain
 # Cyber Infrastructre Defense
 # Final Project
 
 from PyInquirer import style_from_dict, Token
 
-APP_KEY = 'c8f772145fcda6fd601595a54c9bc2fcfc8b66bdb860afd1dbba4672646649d5'
+APP_KEY = ''
 
 BRAND = """
 \u001b[35m    __  __ \u001b[36m                          ()
