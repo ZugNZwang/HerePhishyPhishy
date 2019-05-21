@@ -2,7 +2,7 @@
 
 Phishing is a prime example of social engineering and can cause a lot of harm to an end user or organization and it is an attack that can be difficult to defend against. This project aims to build an anti-phishing tool that will help prevent such phishing attacks.
 
-#Implementation
+# Implementation
 
 The application was built using python 3.6 in addition to some valuable python libraries and the help of the [**PhishTank API**](https://www.phishtank.com/).
 
@@ -29,7 +29,7 @@ Each feature was setup as a method that could parse a URL to extract the informa
 sample of 20%. Our accuracy calculation was **89.6%** This was a good score, but we found there still exist false positives and false negatives when testing certain URLs.
 
 
-#User Instructions
+# User Instructions
 
 **_This was tested and ran on MacOS Mojave_**
 
@@ -49,40 +49,40 @@ You will see the main menu:
 
 Using the arrow keys the user is able to select a menu option and then press enter to proceed.
 
-###DNS Logging Option:
+### DNS Logging Option:
 Selecting this option allows the user to see the traffic on port 53, any DNS queries made will be listed. This can help the user see if there exists any suspicious traffic. If a URL looks suspicious to the user they can then check that URL to see if it is a phishing attack. The user must know what network interface they are using.
 
-####Example of DNS Logging:
+#### Example of DNS Logging:
 
 ![alt-text](https://github.com/ZugNZwang/HerePhishyPhishy/blob/master/images/DNS.png)
 
 
-###Check URL Option:
+### Check URL Option:
 Selecting this option allows the user to check a URL of their choosing. The user will be asked to type out the URL they would like to check. The application sends an API request to the PhishTank website which checks to see if the URL already exists on their database. If the API request returns false it means the URL is not a phishing scheme and the user is notified. If it is true then the user is alerted. The user should enter the full URL.
 
-####Checking https://Google.com:
+#### Checking https://Google.com:
 
 ![alt-text](https://github.com/ZugNZwang/HerePhishyPhishy/blob/master/images/CheckURLPass.png)
 
-####Checking a known Phishing URL:
+#### Checking a known Phishing URL:
 
 ![alt-text](https://github.com/ZugNZwang/HerePhishyPhishy/blob/master/images/CheckURLFail.png)
 
-###ML Detection Option:
+### ML Detection Option:
 
 Selecting this option allows the user to check a URL of their choosing using machine learning prediction. The user will be asked to type out the URL they would like to check. The application then uses the pre-existing model, that was trained on dataset of existing phishing URLs, to then return its prediction on whether the URL could possibly be a Phishing URL or whether it is safe.
 **_The user should enter the full URL for better results._**
 
-####Checking http://twitter.com:
+#### Checking http://twitter.com:
 
 ![alt-text](https://github.com/ZugNZwang/HerePhishyPhishy/blob/master/images/MLDetectionPass.png)
 
-####Checking a known Phishing URL:
+#### Checking a known Phishing URL:
 
 ![alt-text](https://github.com/ZugNZwang/HerePhishyPhishy/blob/master/images/MLDetectionFail.png)
 
-#Immediate Future Work
+# Immediate Future Work
 Future work that can soon be implemented would be the auto-check feature. Our goal with this project was to be able to allow the user to run this application in the background and have our PhishTank API in addition to the machine learning prediction running alongside the DNS logging. This would mean that each time a DNS query is logged it would be checked against our methods and any time something seems suspicious the user could be notified. Another immediate implementation that could be done would be logging other incoming or outgoing connections from other ports. Finally, we could add more important features to our decision tree which could help improve the accuracy of the detector.
 
-#Long Term Future Work
+# Long Term Future Work
 Future work that can be implemented in the long run would be improving the already implemented features, using different machine learning methods that may improve the accuracy and precision. We would also need to use additional phishing mitigation techniques, this could possibly include checking website contents for spam, possibly using Convolutional Neural Networks to check the appearance of actual legitimate websites and those that are fake phishing sites. Looking into detecting phishing email, SMS, or even VoIP. Another implementation that would provide value would be mitigating injection attacks. Ideally we would want our application thorough enough to detect multiple different type of phishing attacks and provide an all in one platform that users could use.
