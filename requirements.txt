@@ -1,0 +1,16 @@
+PyInquirer
+json
+constant
+requests
+urllib
+scapy
+pprint
+re
+pickle
+datetime
+tldextract
+numpy
+pandas
+ipaddress
+splitext
+sklearn
